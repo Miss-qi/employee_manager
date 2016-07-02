@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="manager_update">
+	<update id = "resetpass" parameterType = "com.manager.po.ResetPassPo">
+		UPDATE user SET password WHERE password = #{newpass}
+	</update>
+	<update id = "updaterole" parameterType = "com.manager.po.UpdateRolePo">
+		UPDATE role SET roleName = #{roleName} AND createPerson = #{createPerson}
+	</update>
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+ "http://mybatis.org/dtd/mybatis-3-config.dtd">
+ <configuration>
+ 	<mappers>
+ 		<mapper resource="Sql_select.xml"/>
+ 		<mapper resource="Sql_insert.xml"/>
+ 		<mapper resource="Sql_update.xml"/>
+ 		<mapper resource="Sql_detele.xml"/>
+ 	</mappers>
+ </configuration>   
+    
+    

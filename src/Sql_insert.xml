@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="manager_insert">
+	<!-- 添加用户 -->
+	<insert id="adduser" parameterType="com.manager.po.AddUserPo">
+		<!-- insert into user(phoneNUmber,email,managerID,name,pass,roleName,permission) valuse(#{phoneNUmber},#{email},#{managerID},#{name},#{pass},#{roleName},#{permission}) -->
+		INSERT INTO user(managerID, name, phoneNumber, email, createPerson, password, permission, createTime) VALUES (#{managerID}, #{name}, #{phoneNumber}, #{email}, #{createPerson}, #{password}, #{permission}, sysdate()) 
+	</insert>
+	<!-- 添加角色 -->
+	<insert id = "addRole" parameterType = "com.manager.po.AddRolePo">
+		INSERT INTO role(roleName, createPerson, createTime, reviser, reviseTime) VALUES (#{roleName}, #{createPerson}, sysdate(), #{reviser}, sysdate())
+	</insert>
+</mapper>

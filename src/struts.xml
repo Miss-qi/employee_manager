@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="manager" extends = "struts-default">
+		<action name="login" class="com.manager.action.LoginAction" method="login">
+			<result name = "login">login.html</result>
+			<result name="superlogin">superlogin.jsp</result>
+			<result name="managerlogin">managerlogin.jsp</result>
+			<result name = "commonlogin">commonlogin.jsp</result>
+		</action>
+		
+		<action name="adduser" class="com.manager.action.LoginAction" method="adduser"/>
+		<action name="selectUser" class="com.manager.action.LoginAction" method="selectUser">
+			<result name = "search">search.jsp</result>
+		</action>
+	   <!--  <action name="reset" class="com.manager.action.LoginAction" method="resetpass"/> -->
+	    <action name="addRole" class="com.manager.action.LoginAction" method="addRole"/>
+	    <action name = "selectUser" class = "com.manager.action.LoginAction" method = "selectUser"></action>
+	   <!--  <action name="updaterole" class="com.manager.action.LoginAction" method="updaterole"/>
+	    <action name="permissionmanage" class="com.manager.action.LoginAction" method="permissionmanage"/> -->
+	</package>
+</struts>
